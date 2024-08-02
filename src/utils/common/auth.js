@@ -23,4 +23,14 @@ function generateJWT(data) {
     throw error;
   }
 }
-module.exports = { checkPassword,generateJWT };
+
+function verifyToken(token) {
+  try {
+    return jwt.verify(token, ServerConfig.JWT_SECRET_KEY);
+  } catch (error) {
+    console.log(error);
+    
+    throw error;
+  }
+}
+module.exports = { checkPassword, generateJWT, verifyToken };
