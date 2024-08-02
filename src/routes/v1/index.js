@@ -8,6 +8,6 @@ const UserRoutes = require('./user-routes');
 
 
 router.get('/info', InfoController.info);
-router.use('/signUp',UserRoutes)
+router.use('/user',UserRoutes)
 
 module.exports = router;
