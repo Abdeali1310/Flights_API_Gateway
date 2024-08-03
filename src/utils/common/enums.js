@@ -11,4 +11,11 @@ const BOOKING_STATUS = {
   INITIATED:'initiated',
   PENDING:'pending',
 }
-module.exports = { SEAT_VALUE,BOOKING_STATUS };
+
+const USER_ROLES = {
+  CUSTOMER:'customer',
+  ADMIN:'admin',
+  FLIGHT_COMPANY:'flight-company',
+}
+
+module.exports = { SEAT_VALUE,BOOKING_STATUS,USER_ROLES };
