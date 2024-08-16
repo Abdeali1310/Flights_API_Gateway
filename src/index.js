@@ -17,8 +17,8 @@ const limiter = rateLimit({
 app.use(limiter); //rate limiter
 
 //reverse Proxy
-app.use("/flightsService",createProxyMiddleware({target: "http://localhost:3000/",changeOrigin: true,pathRewrite: {'^/flightsService' : '/'}}));
-app.use("/bookingsService",createProxyMiddleware({target: "http://localhost:4000/",changeOrigin: true,pathRewrite: {'^/bookingsService' : '/'}}));
+app.use("/flightsService",createProxyMiddleware({target: "http://flights_service:3000/",changeOrigin: true,pathRewrite: {'^/flightsService' : '/'}}));
+app.use("/bookingsService",createProxyMiddleware({target: "http://flights_booking_service:4000/",changeOrigin: true,pathRewrite: {'^/bookingsService' : '/'}}));
 
 app.use("/api", apiRoutes);
 
